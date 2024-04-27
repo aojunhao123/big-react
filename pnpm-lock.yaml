@@ -22,7 +22,10 @@ importers:
         version: 25.0.7(rollup@4.16.0)
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
-        version: 11.1.6(rollup@4.16.0)(typescript@5.4.5)
+        version: 11.1.6(rollup@4.16.0)(tslib@2.6.2)(typescript@5.4.5)
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -41,6 +44,9 @@ importers:
       rollup:
         specifier: ^4.16.0
         version: 4.16.0
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -349,7 +355,7 @@ packages:
       rollup: 4.16.0
     dev: true
 
-  /@rollup/plugin-typescript@11.1.6(rollup@4.16.0)(typescript@5.4.5):
+  /@rollup/plugin-typescript@11.1.6(rollup@4.16.0)(tslib@2.6.2)(typescript@5.4.5):
     resolution: {integrity: sha512-R92yOmIACgYdJ7dJ97p4K69I8gg6IEHt8M7dUBxN3W6nrO8uUxX5ixl0yU/N3aZTi8WhPuICvOHXQvF6FaykAA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -365,6 +371,7 @@ packages:
       '@rollup/pluginutils': 5.1.0(rollup@4.16.0)
       resolve: 1.22.8
       rollup: 4.16.0
+      tslib: 2.6.2
       typescript: 5.4.5
     dev: true
 
@@ -1914,6 +1921,10 @@ packages:
       typescript: '>=4.2.0'
     dependencies:
       typescript: 5.4.5
+    dev: true
+
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
   /type-check@0.4.0:

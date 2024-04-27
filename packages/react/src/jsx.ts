@@ -1,5 +1,5 @@
 import { REACT_ELEMENT_TYPE } from 'shared/ReactSymbols';
-import {
+import type {
 	Props,
 	Type,
 	Key,
