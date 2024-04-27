@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "test": "",
     "lint": "eslint -c ./eslint.config.mjs ./packages .js,.ts,.jsx,.tsx --fix --quiet",
     "build:dev": "rm -rf dist && rollup -c scripts/rollup/react.config.ts --configPlugin @rollup/plugin-typescript --bundleConfigAsCjs"
   },
@@ -17,12 +18,14 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.7",
+    "@types/rollup-plugin-generate-package-json": "^3.2.9",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.0.0",
     "husky": "^9.0.11",
     "prettier": "3.2.5",
     "rollup": "^4.16.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0"
