@@ -1,4 +1,4 @@
- import { REACT_ELEMENT_TYPE } from 'shared/ReactSymbols';
+import { REACT_ELEMENT_TYPE } from 'shared/ReactSymbols';
 import type {
 	Props,
 	Type,
@@ -61,5 +61,31 @@ export const jsx = (type: ElementType, config: any, ...children: any) => {
 	return ReactElement(type, key, ref, props);
 };
 
+// 开发环境下jsx方法
+export const jsxDEV = (type: ElementType, config: any) => {
+	let key = null;
+	let ref = null;
+	const props: any = {};
+	for (const prop in config) {
+		const val = config[prop];
+		if (prop === 'key') {
+			if (val !== undefined) {
+				key = '' + val;
+				continue;
+			}
+		}
+		if (prop === 'ref') {
+			if (val !== undefined) {
+				ref = val;
+				continue;
+			}
+		}
+		// 判断config对象上是否有prop属性（采用这种写法是避免config对象被修改或hasOwnProperty方法被重写）
+		if ({}.hasOwnProperty.call(config, prop)) {
+			props[prop] = val;
+		}
+	}
+	return ReactElement(type, key, ref, props);
+};
+
 export default ReactElement;
-export const jsxDEV = jsx;
